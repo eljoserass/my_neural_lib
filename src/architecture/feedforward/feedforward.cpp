@@ -1,4 +1,4 @@
-#include "feedworward/feedforward.hpp"
+#include "architecture/feedforward/feedforward.hpp"
 
 // Constructor
 Feedforward::Feedforward(int inputSize, int hiddenSize, int outputSize)
