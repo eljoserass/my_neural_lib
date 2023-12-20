@@ -9,8 +9,8 @@ int main(void) {
     const int attr = 3;
     const int neurons = 2;
     Eigen::Matrix<float , rows, attr> input {
-        {1,2,1},
-        {0,3,1}
+        {0,0,0},
+        {1,1,1}
     };
     Eigen::Matrix<float , attr, neurons> w {
         {1, 1},
