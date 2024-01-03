@@ -1,0 +1,6 @@
+linear:
+
+linear transformation with learnable parameteers w and b.
+takes as parameters the dimension of the input matrix, the output dimension (aka how many perceptrons)
+and the number of rows of the batch.
+

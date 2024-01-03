@@ -13,16 +13,15 @@ int Linear::get_input_dim()  { return _input_dim; }
 
 int Linear::get_output_dim() { return _output_dim; }
 
-Eigen::Matrix<float, Eigen::Dynamic, Eigen::Dynamic> Linear::get_w(void) {
+Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic> Linear::get_w(void) {
     return _w;
 }
 
-Eigen::Matrix<float, Eigen::Dynamic, Eigen::Dynamic> Linear::get_b(void) {
+Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic> Linear::get_b(void) {
     return _b;
 }
 
 void Linear::compute_logits(Eigen::MatrixXf input) {
     logits = input * _w;
-
     logits.rowwise() += _b;
 }
