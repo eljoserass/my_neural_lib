@@ -12,7 +12,12 @@ TEST(LinearLayerTest, InitDimension) {
 }
 
 TEST(LinearLayerTest, LogitsDimensions) {
-    Linear linear_layer(3,2, 2);
+    int input_dim = 3;
+
+    int output_dim = 2;
+
+    int n_rows = 2;
+    Linear linear_layer(input_dim, output_dim, n_rows);
     
     // TODO check actual dims
     // just print for now because i dont rememebr the function
@@ -25,12 +30,5 @@ TEST(LinearLayerTest, LogitsDimensions) {
 
     linear_layer.compute_logits(input);
 
-    std::cout << linear_layer.logits << std::endl
-}
-
-
-
-int main(int argc, char **argv) {
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
+    std::cout << linear_layer.logits << std::endl;
 }

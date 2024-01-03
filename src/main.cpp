@@ -18,15 +18,16 @@ int main(void) {
         {2,2}
     };
 
+    Eigen::Matrix<float, Eigen::Dynamic, Eigen::Dynamic> _w = Eigen::MatrixXf::Random(attr, neurons);
     // Eigen::Matrix<float, 2,2> b {{1, 1},{1,1}
     // };
     Eigen::Matrix<float, rows, neurons> result;
-    Eigen::Matrix<float, 1, neurons> b;
-    b << 1.f, 2.f;
-    std::cout << b.transpose() << std::endl;
+    Eigen::Matrix<float, 1, Eigen::Dynamic> b;
+    b = Eigen::MatrixXf::Ones(1, neurons);
+    // std::cout << b.transpose() << std::endl;
     // auto resultt = input * w;
     // result += b;
-    result = input * w;
+    result = input * _w;
     std::cout << "before b \n" << result << std::endl;
     // result = input * w +  b.transpose().replicate(input.rows(), 1);
     result.rowwise() += b;

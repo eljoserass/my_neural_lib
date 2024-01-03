@@ -3,7 +3,7 @@ CXX = g++
 CXXFLAGS = -Wall -I./include
 SRC_DIR = src
 BUILD_DIR = build
-TEST_DIR = test
+TEST_DIR = test/unit
 TARGET = $(BUILD_DIR)/main_runner
 TEST_TARGET = $(BUILD_DIR)/test_runner
 
